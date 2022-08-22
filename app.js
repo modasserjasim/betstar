@@ -1,7 +1,6 @@
 const selectedPlayers = [];
 
 function displayPlayers(playerName){
-    console.log(playerName)
     const playerOrderList = document.getElementById('selected-player-list');
     playerOrderList.innerHTML = '';
 
@@ -45,4 +44,16 @@ document.getElementById('calculate-player').addEventListener('click', function()
 
     const totalPlayerExpenses = perPlayerAmount * selectedPlayers.length;
     setTextResultById('player-expenses', totalPlayerExpenses);
+
+})
+document.getElementById('calculate-total').addEventListener('click', function(){
+    const managerExpense = getInputValueById('manager-field');
+    const coachExpense = getInputValueById('coach-field');
+
+    const PlayerTotalExpense = document.getElementById('player-expenses');
+    const PlayerTotalExpenseString = PlayerTotalExpense.innerText;
+    const PlayerTotalExpenseAmount = parseFloat(PlayerTotalExpenseString);
+
+    const totalExpenses = PlayerTotalExpenseAmount + managerExpense + coachExpense;
+    setTextResultById('total-expenses', totalExpenses);
 })

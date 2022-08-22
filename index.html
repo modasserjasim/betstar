@@ -139,29 +139,29 @@
                                 </ol>
                             </div>
                             <!-- Budget calculation  -->
-                            <div class="bg-black py-10 px-8 md:px-14 rounded-md mt-8">
+                            <div class="bg-black py-10 px-8 md:px-12 rounded-md mt-8">
                                 <div class="flex flex-col items-center">
                                     <h2 class="text-4xl">Budget</h2>
                                     <img src="images/title-line.png" alt="">
                                 </div>
                                 <div class="flex items-center mt-10">
-                                    <label class="w-full text-xl text-gray-400">Per Player</label>
-                                    <input id="player-field" class="w-full bg-black border-gray-300 border-2 p-3 text-xl rounded-sm" type="number" value="1000">
+                                    <label class="w-5/12 text-xl text-gray-400">Per Player</label>
+                                    <input id="player-field" class="w-7/12 bg-black border-gray-300 border-2 p-3 text-xl rounded-sm" type="number" value="1000" placeholder="Enter Amount">
                                 </div>
                                 <button id="calculate-player" class="w-full bg-rose-800 p-3 mt-3 disabled:bg-gray-500 text-2xl rounded-sm">Calculate</button>
                                 <h3 class="text-xl text-gray-300 py-8">Player Expenses: $<span id="player-expenses" class="text-white">5000</span></h3>
                                 <div class="flex items-center">
-                                    <label class="w-full text-xl text-gray-400">Manager</label>
-                                    <input id="manager-field" class="w-full bg-black border-gray-300 border-2 p-3 text-xl rounded-sm" type="number" value="2000">
+                                    <label class="w-5/12 text-xl text-gray-400">Manager</label>
+                                    <input id="manager-field" class="w-7/12 bg-black border-gray-300 border-2 p-3 text-xl rounded-sm" type="number" value="2000" placeholder="Enter Amount">
                                 </div>
                                 <div class="flex items-center mt-3">
-                                    <label class="w-full text-xl text-gray-400">Coach</label>
-                                    <input class="w-full bg-black border-gray-300 border-2 p-3 text-xl rounded-sm" type="number" value="4000">
+                                    <label class="w-5/12 text-xl text-gray-400">Coach</label>
+                                    <input id="coach-field" class="w-7/12 bg-black border-gray-300 border-2 p-3 text-xl rounded-sm" type="number" value="4000" placeholder="Enter Amount">
                                 </div>
-                                <button class="w-full bg-rose-800 p-3 mt-3 disabled:bg-gray-500 text-2xl rounded-sm">Calculate Total</button>
+                                <button id="calculate-total" class="w-full bg-rose-800 p-3 mt-3 disabled:bg-gray-500 text-2xl rounded-sm">Calculate Total</button>
                                 <div class="flex items-center justify-between pt-4">
                                     <h3 class="text-2xl text-gray-300">Total </h3>
-                                    <h3 class="text-rose-700 text-2xl">$<span id="player-expenses">5000</span></h3>
+                                    <h3 class="text-rose-700 text-2xl">$<span id="total-expenses">5000</span></h3>
                                 </div>
                             </div>
                         </div>
