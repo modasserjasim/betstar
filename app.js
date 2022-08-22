@@ -7,7 +7,6 @@ function displayPlayers(playerName){
 
     for(i = 0; i < playerName.length; i++){
         player = playerName[i];
-        // console.log(player);
         const li = document.createElement('li');
         li.setAttribute('class', 'text-2xl py-3');
         li.innerText = player;
@@ -26,3 +25,24 @@ function playerToSelect(select){
     displayPlayers(selectedPlayers)
 
 }
+
+// calculation area
+
+function getInputValueById(inputId){
+    const inputField = document.getElementById(inputId);
+    const inputFieldString = inputField.value;
+    const inputFieldAmount = parseFloat(inputFieldString);
+    inputField.value = '';
+    return inputFieldAmount;
+}
+
+function setTextResultById(elementId, value){
+    const textElement = document.getElementById(elementId);
+    textElement.innerText = value;
+}
+document.getElementById('calculate-player').addEventListener('click', function(){
+    const perPlayerAmount = getInputValueById('player-field');
+
+    const totalPlayerExpenses = perPlayerAmount * selectedPlayers.length;
+    setTextResultById('player-expenses', totalPlayerExpenses);
+})
