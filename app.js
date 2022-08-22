@@ -13,6 +13,7 @@ function displayPlayers(playerName){
         playerOrderList.appendChild(li);
     }
 }
+
 // find the player name using onclick function
 function playerToSelect(select){
     const playerName = select.parentNode.children[0].innerText;
