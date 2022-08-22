@@ -1,17 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BetStar is the #1 football betting app.</title>
+    <title>BetStar : the #1 football betting app.</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
     <header>
-        <div>
-            <h1>BetStar is the #1 football betting app.</h1>
-        </div>
+        <!-- Hero section start  -->
+        <section class="bg-black text-white">
+            <div class="lg:grid lg:grid-cols-5 lg:flex items-center pt-10">
+                <div class="hidden lg:block w-full">
+                    <img class="lg:w-full" src="images/mbappe-hero.png" alt="Mbappe">
+                </div>
+                <div class="col-span-3 w-5/6 mx-auto py-1">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl text-center pb-5 text-rose-500 font-extrabold">BetStar :
+                        the #1 football betting app.</h1>
+                    <div class="flex justify-end">
+                        <img src="images/headline-line.png" alt="line">
+                    </div>
+                    <p class="text-center lg:text-xl md:text-sm pt-5">Select your best five below to start betting with
+                        BetStar. Looking for a great football betting app? BetStar has you covered, with expert tips and
+                        picks for all the major leagues. Download our app today and start winning.</p>
+                </div>
+                <div class="flex justify-between lg:justify-end">
+                    <img class="w-5/12 sm:w-2/12 lg:w-full lg:hidden" src="images/mbappe-hero.png" alt="">
+                    <img class="w-5/12 sm:w-2/12 lg:w-full" src="images/hero-right.png" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- hero section end  -->
     </header>
+
+    <main>
+        <!-- Players section start here  -->
+        <section>
+            <div class="bg-gray-900 border-t-2 border-sky-800 text-white py-24">
+                <div class="container mx-auto p-5">
+                    <div class="md:flex no-wrap md:-mx-2 ">
+                        <!-- left Side -->
+                        <div class="w-full md:w-9/12 mx-2 h-64">
+
+                        </div>
+                        <!-- right Side -->
+                        <div class="w-full md:w-3/12 md:mx-2">
+                            <!-- Players selected  -->
+                            <div class="bg-black py-10 px-20 rounded-md">
+                                <div class="flex flex-col items-center">
+                                    <h2 class="text-4xl">Selected - V</h2>
+                                    <img src="images/title-line.png" alt="">
+                                </div>
+                                <ol class="mt-10 list-decimal">
+                                    <li class="text-2xl py-3">Lionel Messi</li>
+                                    <li class="text-2xl py-3">Kylian Mbappe</li>
+                                    <li class="text-2xl py-3">Neymar Jr</li>
+                                    <li class="text-2xl py-3">Sergio Ramos</li>
+                                    <li class="text-2xl py-3">Keylor Navas</li>
+                                </ol>
+                            </div>
+                            <!-- Budget calculation  -->
+                            <div class="bg-black py-10 px-14 rounded-md mt-8">
+                                <div class="flex flex-col items-center">
+                                    <h2 class="text-4xl">Budget</h2>
+                                    <img src="images/title-line.png" alt="">
+                                </div>
+                                <div class="flex items-center mt-10">
+                                    <label class="w-full text-xl">Per Player</label>
+                                    <input class="w-full bg-black border-gray-300 border-2 p-3 text-xl rounded-sm" type="number" value="1000">
+                                </div>
+                                <button class="w-full bg-rose-500 p-4 mt-3 disabled:bg-gray-500 text-2xl rounded-sm">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Players section end here  -->
+    </main>
 </body>
+
 </html>
