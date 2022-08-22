@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BetStar : the #1 football betting app.</title>
     <link rel="shortcut icon" href="images/betstar-icon.png" type="image/x-icon">
+    <!-- tailwindcss CDN integration -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -131,11 +132,7 @@
                                     <img src="images/title-line.png" alt="">
                                 </div>
                                 <ol id="selected-player-list" class="mt-10 list-decimal pl-8">
-                                    <!-- <li class="text-2xl py-3">Lionel Messi</li>
-                                    <li class="text-2xl py-3">Kylian Mbappe</li>
-                                    <li class="text-2xl py-3">Neymar Jr</li>
-                                    <li class="text-2xl py-3">Sergio Ramos</li>
-                                    <li class="text-2xl py-3">Keylor Navas</li> -->
+                                    
                                 </ol>
                             </div>
                             <!-- Budget calculation  -->
@@ -149,6 +146,7 @@
                                     <input id="player-field" class="w-7/12 bg-black border-gray-300 border-2 p-3 text-xl rounded-sm" type="number" value="1000" placeholder="Enter Amount">
                                 </div>
                                 <button id="calculate-player" class="w-full bg-rose-800 p-3 mt-3 disabled:bg-gray-500 text-2xl rounded-sm">Calculate</button>
+                                <!-- players total expenses -->
                                 <h3 class="text-xl text-gray-300 py-8">Player Expenses: $<span id="player-expenses" class="text-white">5000</span></h3>
                                 <div class="flex items-center">
                                     <label class="w-5/12 text-xl text-gray-400">Manager</label>
@@ -161,6 +159,7 @@
                                 <button id="calculate-total" class="w-full bg-rose-800 p-3 mt-3 disabled:bg-gray-500 text-2xl rounded-sm">Calculate Total</button>
                                 <div class="flex items-center justify-between pt-4">
                                     <h3 class="text-2xl text-gray-300">Total </h3>
+                                    <!-- Total expenses  -->
                                     <h3 class="text-rose-700 text-2xl">$<span id="total-expenses">5000</span></h3>
                                 </div>
                             </div>
@@ -172,6 +171,7 @@
         <!-- Players section end here  -->
     </main>
 
+    <!-- Footer section start here  -->
     <footer>
         <section>
             <div class="bg-gray-900 border-t border-gray-600 h-28 text-white text-xl flex justify-center items-center">
@@ -179,6 +179,8 @@
             </div>
         </section>
     </footer>
+    <!-- Footer section end here  -->
+
     <script src="app.js"></script>
 </body>
 

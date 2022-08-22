@@ -1,3 +1,4 @@
+// creating an array to store the player names
 const selectedPlayers = [];
 
 // display player name to the player board
@@ -6,7 +7,7 @@ function displayPlayers(playerName){
     playerOrderList.innerHTML = '';
 
     for(i = 0; i < playerName.length; i++){
-        player = playerName[i];
+        const player = playerName[i];
         const li = document.createElement('li');
         li.setAttribute('class', 'text-2xl py-3');
         li.innerText = player;
@@ -38,10 +39,11 @@ function setTextResultById(elementId, value){
     const textElement = document.getElementById(elementId);
     textElement.innerText = value;
 }
-// Calculate the player amounts and find the total expenses
+// Calculate the player amounts and find the total player expenses
 document.getElementById('calculate-player').addEventListener('click', function(){
     const perPlayerAmount = getInputValueById('player-field');
 
+    // calculate players total expenses
     const totalPlayerExpenses = perPlayerAmount * selectedPlayers.length;
     //Input validation
     if(perPlayerAmount == 'number' || !isNaN(perPlayerAmount)){
@@ -64,6 +66,7 @@ document.getElementById('calculate-total').addEventListener('click', function(){
     const PlayerTotalExpenseString = PlayerTotalExpense.innerText;
     const PlayerTotalExpenseAmount = parseFloat(PlayerTotalExpenseString);
 
+    // calculate Total amount 
     const totalExpenses = PlayerTotalExpenseAmount + managerExpense + coachExpense;
     //input validation
     if((managerExpense == 'number' && coachExpense == 'number') || (!isNaN(managerExpense) && !isNaN(coachExpense))){
