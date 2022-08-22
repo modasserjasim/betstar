@@ -1,5 +1,6 @@
 const selectedPlayers = [];
 
+// display player name to the player board
 function displayPlayers(playerName){
     const playerOrderList = document.getElementById('selected-player-list');
     playerOrderList.innerHTML = '';
@@ -12,21 +13,19 @@ function displayPlayers(playerName){
         playerOrderList.appendChild(li);
     }
 }
-
+// find the player name using onclick function
 function playerToSelect(select){
     const playerName = select.parentNode.children[0].innerText;
+    // set condition of maximum 5 palyers on the board.
     if(selectedPlayers.length < 5){
+        select.setAttribute('disabled', true);
         selectedPlayers.push(playerName);
     } else{
         alert("You can't select more than 5 Players");
     }
-
     displayPlayers(selectedPlayers)
-
 }
-
-// calculation area
-
+// Common functions
 function getInputValueById(inputId){
     const inputField = document.getElementById(inputId);
     const inputFieldString = inputField.value;
@@ -34,18 +33,28 @@ function getInputValueById(inputId){
     inputField.value = '';
     return inputFieldAmount;
 }
-
 function setTextResultById(elementId, value){
     const textElement = document.getElementById(elementId);
     textElement.innerText = value;
 }
+// Calculate the player amounts and find the total expenses
 document.getElementById('calculate-player').addEventListener('click', function(){
     const perPlayerAmount = getInputValueById('player-field');
 
     const totalPlayerExpenses = perPlayerAmount * selectedPlayers.length;
-    setTextResultById('player-expenses', totalPlayerExpenses);
-
+    //Input validation
+    if(perPlayerAmount == 'number' || !isNaN(perPlayerAmount)){
+        if(perPlayerAmount >= 0){
+            setTextResultById('player-expenses', totalPlayerExpenses);
+        } else{
+            alert('Please input a positive amount number');
+        }
+    } else{
+        alert('Please input a valid amount number');
+    }
 })
+
+// Calculate Manager and Coach expenses and add it with player expenses for total result
 document.getElementById('calculate-total').addEventListener('click', function(){
     const managerExpense = getInputValueById('manager-field');
     const coachExpense = getInputValueById('coach-field');
@@ -55,5 +64,14 @@ document.getElementById('calculate-total').addEventListener('click', function(){
     const PlayerTotalExpenseAmount = parseFloat(PlayerTotalExpenseString);
 
     const totalExpenses = PlayerTotalExpenseAmount + managerExpense + coachExpense;
-    setTextResultById('total-expenses', totalExpenses);
+    //input validation
+    if((managerExpense == 'number' && coachExpense == 'number') || (!isNaN(managerExpense) && !isNaN(coachExpense))){
+        if(managerExpense >= 0 && coachExpense >= 0){
+            setTextResultById('total-expenses', totalExpenses);
+        } else{
+            alert('Please input a positive amount number')
+        }
+    } else{
+        alert('Please input a valid amount number')
+    }
 })
