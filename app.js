@@ -2,7 +2,7 @@
 const selectedPlayers = [];
 
 // display player name to the player board
-function displayPlayers(playerName){
+function displayPlayersToList(playerName){
     const playerOrderList = document.getElementById('selected-player-list');
     playerOrderList.innerHTML = '';
 
@@ -16,7 +16,7 @@ function displayPlayers(playerName){
 }
 
 // find the player name using onclick function
-function playerToSelect(select){
+function addToList(select){
     const playerName = select.parentNode.children[0].innerText;
     // set condition of maximum 5 palyers on the board.
     if(selectedPlayers.length < 5){
@@ -25,7 +25,7 @@ function playerToSelect(select){
     } else{
         alert("You can't select more than 5 Players");
     }
-    displayPlayers(selectedPlayers)
+    displayPlayersToList(selectedPlayers);
 }
 // Common functions
 function getInputValueById(inputId){
